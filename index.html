@@ -4,12 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <title>Movie Logger</title>
     <link rel="stylesheet" href="style.css"/>
     <script src="script.js"></script>
 </head> 
 <body>
-    <a href="/"><h1>Movie Logger</h1></a>
+    <nav>
+        <div class="left">
+            <a href="/">
+                <img src="logo.jfif" width="50" alt="logos">
+            </a>
+        </div>
+        <div class="right">
+            <ul>
+                <a href="#home">
+                    <li>Home</li>
+                </a>
+                <a href="#mymovies">
+                    <li>My Movies</li>
+                </a>
+                <a href="#about">
+                    <li>About</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="home">
+        <div class="centered">
+            <div>
+                <h1 class="title" id="home-title">
+                    Movie Logger
+                </h1>
+            </div>
+            <button class="btn" id="addMovieButton">
+                Add New Movie
+            </button>
+            <div class="addArea" id="addArea">
+                <form action="#" id="addForm">
+                    <input placeholder="Search Movies" id="searchBar" class="searchbar" autocomplete="off">
+                    <button type="submit" class="btn submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="flex" id="searchMovies" style="margin-top: 3rem;">
+        </div>
+    </div>
+
+    <div id="mymovies">
+        <div>
+            <h1 class="title">
+                My Movies
+            </h1>
+        </div>
+        <div class="flex" id="movies" style="margin-top: 3rem;">
+        </div>
+   </div>
+
+   <div id="about">
+       <h1 class="title">
+        About
+       </h1>
+       <div class="content">
+           <h3 class="about-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos perspiciatis, aut repellendus maxime, nesciunt qui, magnam neque excepturi a velit inventore. Iste, itaque saepe vel quisquam maxime maiores officiis laudantium pariatur assumenda similique suscipit odio nihil non vero vitae enim facilis reiciendis ullam labore, nulla corporis. Fugit, non illo sunt corrupti est, assumenda, doloribus cumque facere voluptates minima consectetur. Corrupti blanditiis fuga soluta a reprehenderit magni maiores assumenda optio praesentium sed unde dolore ratione enim commodi id sit et modi veritatis, repudiandae deserunt ea tempore aliquid laborum? Recusandae autem earum quis distinctio dolore illo minus architecto dolorum? Vitae, repellendus blanditiis labore harum accusantium pariatur provident ipsum vel voluptatem autem minus qui accusamus sed hic incidunt vero ad nulla earum. Nisi ipsa, accusantium harum mollitia maiores dolorem quos obcaecati nulla distinctio quibusdam, sapiente autem fugit corrupti eveniet possimus velit cum, alias eligendi enim molestiae aliquam. Aliquam, reiciendis velit dolorum accusantium inventore delectus. Distinctio similique quas quae nobis nostrum excepturi voluptate, voluptas sapiente perferendis officiis doloremque! Non placeat deleniti esse quasi similique dolorem obcaecati enim repellat. Placeat nihil reiciendis minima debitis ducimus autem rem distinctio aliquid, temporibus asperiores animi, doloremque, ipsa dicta magnam est quas expedita officia! Iste mollitia assumenda quas architecto?
+           </h3>
+       </div>
+   </div>
+
+    <!-- <a href="/"><h1>Movie Logger</h1></a>
     <button id="addMovieButton">Add New Movie</button>
     <div class="movies" id="movies"></div>
     <div class="addArea" id="addArea">
@@ -20,6 +89,6 @@
             </form>
         </div>
         <div class="movies" id="searchMovies"></div>
-    </div>
+    </div> -->
 </body>
 </html>

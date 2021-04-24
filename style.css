@@ -1,4 +1,164 @@
-body {
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lexend', sans-serif
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.473);
+    height: 4rem;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+
+nav .left{
+    padding-top: 6px;
+    float: left;
+    clear: both;
+}
+
+.left img{
+    margin-left: 5rem;
+}
+
+nav .right{
+    padding-top: 6px;
+    float: right;
+}
+
+.right ul{
+    margin-right: 8rem;
+}
+
+.right li{
+    margin-right: 1.5rem;
+    padding: 7px;
+    display: inline;
+    font-weight: 200;
+}
+
+.right a{
+    text-decoration: none;
+    color: white;
+    transition-duration: 1s;
+}
+
+.right a:hover{
+    color: cyan;
+}
+
+#home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centered{
+    text-align: center;
+}
+
+.title{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.btn{
+    border: none;
+    padding: 15px;
+    background-color: cyan;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Lexend Deca', sans-serif;
+    transition-duration: 400ms;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#addArea{
+    display: none;
+}
+
+form{
+    margin-top: 2rem;
+}
+
+form input{
+    width: 25rem;
+    padding: 10px;
+    font-family: 'Lexend', sans-serif;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.submit{
+    padding: 0.7rem;
+}
+
+#mymovies{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+
+.card{
+    flex: 1/4;
+    flex-basis: 17rem;
+    height: fit-content;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+}
+
+.delete{
+    padding: 0.7rem;
+}
+
+#about{
+    height: 100vh;
+    padding: 0rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content{
+    text-align: center;
+}
+
+@media(max-width: 500px){
+    #mymovies{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+/* body {
     text-align: center;
 }
 
@@ -66,4 +226,4 @@ a {
     margin-left: 10px;
     margin-top: 20px;
     height: 35px;
-}
+} */

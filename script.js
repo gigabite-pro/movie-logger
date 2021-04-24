@@ -1,8 +1,10 @@
 window.onload = function(e) { 
+    const homePage = document.getElementById("home")
     const movies = document.getElementById("movies")
     const addArea = document.getElementById("addArea")
     const addForm = document.getElementById("addForm")
     const searchMovies = document.getElementById("searchMovies")
+    const homeTitle = document.getElementById('home-title')
 
     const storedMovies = localStorage.getItem("movies")
 
@@ -21,7 +23,13 @@ window.onload = function(e) {
                 } else {
                     rating = "unrated"
                 }
-                movies.innerHTML += `<div class="movie-card"><img src="https://image.tmdb.org/t/p/w300${m.poster_path}" /><h1>${m.title}</h1><p class="rating">${rating}</p><p class="review">${m.review}</p><button onclick="deleteMovie('${m.id}');">Delete</button></div>` 
+                movies.innerHTML += `<div class="card">
+                <img src="https://image.tmdb.org/t/p/w300${m.poster_path}" width="200">
+                <h2>${m.title}</h2>
+                <p class="rating">${rating}</p>
+                <p class="review">${m.review}</p>
+                <button class="btn delete" onclick="deleteMovie('${m.id}');">Delete Movie</button>
+            </div>`
             }
         })
     }
@@ -47,10 +55,16 @@ window.onload = function(e) {
                 .then(async (result) => {
                     const response = await result.json() 
                     const results = response.results
+                    homePage.style.height = "fit-content";
+                    homeTitle.style.marginTop = "5rem";
                     searchMovies.innerHTML = ""
                     results.forEach((m) => {
                         if(m.poster_path != null && m.title != null) {
-                            searchMovies.innerHTML += `<div class="movie-card"><img src="https://image.tmdb.org/t/p/w300${m.poster_path}" /><h1>${m.title}</h1><button onclick="addMovie('${m.id}','${m.title}', '${m.poster_path}');">Add</button></div>` 
+                            searchMovies.innerHTML += `<div class="card">
+                            <img src="https://image.tmdb.org/t/p/w300${m.poster_path}" width="200">
+                            <h2>${m.title}</h2>
+                            <button class="btn delete" onclick="addMovie('${m.id}','${m.title}', '${m.poster_path}');">Add Movie</button>
+                        </div>` 
                         }
                     })
                 })
