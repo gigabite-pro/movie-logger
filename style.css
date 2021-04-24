@@ -10,14 +10,14 @@ body{
 
 nav{
     background-color: rgba(0, 0, 0, 0.473);
-    height: 4rem;
+    height: 5rem;
     position: fixed;
     top: 0%;
     width: 100%;
 }
 
 nav .left{
-    padding-top: 6px;
+    padding-top: 12px;
     float: left;
     clear: both;
 }
@@ -27,7 +27,7 @@ nav .left{
 }
 
 nav .right{
-    padding-top: 6px;
+    padding-top: 3px;
     float: right;
 }
 
@@ -50,17 +50,6 @@ nav .right{
 
 .right a:hover{
     color: cyan;
-}
-
-#home{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.centered{
-    text-align: center;
 }
 
 .title{
@@ -86,11 +75,15 @@ nav .right{
 }
 
 #addArea{
+    height: 100vh;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 form{
-    margin-top: 2rem;
+    margin-top: rem;
 }
 
 form input{

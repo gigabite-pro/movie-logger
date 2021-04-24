@@ -1,10 +1,9 @@
 window.onload = function(e) { 
-    const homePage = document.getElementById("home")
     const movies = document.getElementById("movies")
     const addArea = document.getElementById("addArea")
     const addForm = document.getElementById("addForm")
     const searchMovies = document.getElementById("searchMovies")
-    const homeTitle = document.getElementById('home-title')
+    const myMovies = document.getElementById('mymovies');
 
     const storedMovies = localStorage.getItem("movies")
 
@@ -23,6 +22,7 @@ window.onload = function(e) {
                 } else {
                     rating = "unrated"
                 }
+                myMovies.style.marginTop = '7rem'
                 movies.innerHTML += `<div class="card">
                 <img src="https://image.tmdb.org/t/p/w300${m.poster_path}" width="200">
                 <h2>${m.title}</h2>
@@ -36,8 +36,8 @@ window.onload = function(e) {
 
     document.addEventListener("click", function (e) {
         if(e.target.id == "addMovieButton") {
-            movies.style.display = "none"
-            addArea.style.display = "block"
+            myMovies.style.display = "none"
+            addArea.style.display = "flex"
             document.title += " | Add Movie"
         }
     })
@@ -55,8 +55,8 @@ window.onload = function(e) {
                 .then(async (result) => {
                     const response = await result.json() 
                     const results = response.results
-                    homePage.style.height = "fit-content";
-                    homeTitle.style.marginTop = "5rem";
+                    addForm.style.marginTop = '10rem'
+                    addArea.style.height = 'fit-content'
                     searchMovies.innerHTML = ""
                     results.forEach((m) => {
                         if(m.poster_path != null && m.title != null) {
