@@ -1,0 +1,69 @@
+body {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+.movie-card {
+    width: 300px;
+    height: auto;
+    border-style: solid;
+    padding: 20px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.movie-card img {
+    width: 300px;
+    height: 300px;
+}
+
+.movie-card h1 {
+    margin-top: 5px;
+}
+
+.movies {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+
+.rating {
+    margin-top: -20px;
+}
+
+.date {
+    margin-top: -10px;
+}
+
+.review {
+    margin-top: 20px;
+}
+
+.addArea {
+    display: none;
+}
+
+.search {
+    margin: auto;
+}
+
+.searchbar {
+    margin-top: 20px;
+    height: 30px;
+    width: 400px;
+    padding-left: 10px;
+}
+
+.search button {
+    margin-left: 10px;
+    margin-top: 20px;
+    height: 35px;
+}
